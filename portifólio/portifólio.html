@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio - Calculadora Simples em Python</title>
+  <style>
+    /* Reset de estilos padrões */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos gerais */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #4CAF50;
+    }
+
+    /* Container do conteúdo */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Seção do projeto */
+    .project-section {
+      margin-bottom: 30px;
+    }
+
+    .project-description {
+      margin-bottom: 15px;
+    }
+
+    /* Código Python */
+    pre {
+      background-color: #2e2e2e;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 1rem;
+      overflow-x: auto;
+    }
+
+    /* Estilo do botão */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container principal -->
+  <div class="container">
+
+    <h1>Meu Portfólio</h1>
+    
+    <!-- Seção do Projeto -->
+    <div class="project-section">
+      <h2>Calculadora Simples em Python</h2>
+      <p class="project-description">Este é um projeto que desenvolvi utilizando Python. A calculadora simples permite realizar operações de soma, subtração, multiplicação e divisão entre dois números fornecidos pelo usuário. O código foi desenvolvido para ser interativo, permitindo que o usuário escolha a operação desejada através de um menu simples no terminal.</p>
+
+      <h3>Descrição do Código:</h3>
+      <p>Este código em Python possui funções para cada operação matemática (soma, subtração, multiplicação e divisão), além de um menu interativo que recebe a escolha do usuário e executa a operação correspondente. O código lida com a entrada do usuário, verificando se a operação escolhida é válida e se os números inseridos são adequados.</p>
+
+      <!-- Exibição do código -->
+      <h3>Código Python:</h3>
+      <pre>
+def somar(x, y):
+    return x + y
+
+def subtrair(x, y):
+    return x - y
+
+def multiplicar(x, y):
+    return x * y
+
+def dividir(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Erro! Divisão por zero."
+
+# Função principal que exibe o menu e executa as operações
+def calculadora():
+    print("Selecione a operação desejada:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+
+    # Recebe a escolha do usuário
+    escolha = input("Digite o número da operação (1/2/3/4): ")
+
+    # Verifica se a escolha é válida
+    if escolha in ['1', '2', '3', '4']:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+
+        if escolha == '1':
+            print(f"{num1} + {num2} = {somar(num1, num2)}")
+        elif escolha == '2':
+            print(f"{num1} - {num2} = {subtrair(num1, num2)}")
+        elif escolha == '3':
+            print(f"{num1} * {num2} = {multiplicar(num1, num2)}")
+        elif escolha == '4':
+            print(f"{num1} / {num2} = {dividir(num1, num2)}")
+    else:
+        print("Escolha inválida!")
+
+# Executa a calculadora
+calculadora()
+      </pre>
+
+      <p>Esse código foi uma excelente oportunidade de praticar a lógica de programação em Python e aprimorar minhas habilidades em desenvolvimento de soluções simples e interativas.</p>
+
+    
+    </div>
+
+  </div>
+
+</body>
+</html>
